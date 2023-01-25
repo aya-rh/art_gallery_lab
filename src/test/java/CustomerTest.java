@@ -31,8 +31,8 @@ public class CustomerTest {
         gallery.addArtworks(Fire);
 
         // assert
-        gallery.countTill(gallery);
-        assertThat(gallery.getArtworks()).isEqualTo(1400);
+        customer.wallet(gallery);
+        assertThat(customer.getWallet()).isEqualTo(1400);
     }
 
 

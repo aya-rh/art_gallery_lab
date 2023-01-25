@@ -2,17 +2,14 @@ import java.util.ArrayList;
 public class Gallery {
 
     // properties
-
     private String name;
-
     private int till;
 
     private ArrayList<Artwork> artworks;
-    private ArrayList<Customer> customers;
+//    private ArrayList<Customer> customers;
 
 
     // constructor
-
     public Gallery(String name) {
         this.name = name;
         this.till = 0;
@@ -41,15 +38,11 @@ public class Gallery {
         return this.artworks;
     }
 
-    public ArrayList<Customer> getCustomers() {
-        return this.customers;
-    }
-
     public void addArtwork(Artwork jol) {
     }
 
 
-    // allow customers to buy artwork from gallery
+    // allow customers to buy artwork from gallery, reducing money from wallet and removing artwork bought from stock
     public void buyArtwork(Customer customer, Artwork artwork){
         if (customer.getWallet() >= artwork.getPrice()){
             customer.setWallet(customer.getWallet() - artwork.getPrice());

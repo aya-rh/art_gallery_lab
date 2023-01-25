@@ -19,16 +19,17 @@ public class Customer {
 
     public void wallet(Gallery gallery){
         // get artworks from the gallery
-        ArrayList<Customer> customers = gallery.getCustomers();
+//        ArrayList<Customer> customers = gallery;
+        String name = getName();
 
         //start a running total of artworks
         int totalArtworks = 0;
 
         // loop through customers
-        for (Customer customer: customers){
+        for (Artwork artwork : gallery.getArtworks()){
             // add each artwork to running total
-            totalArtworks += customer.getWallet();
-            customer.setWallet(0);
+            totalArtworks += artwork.getPrice();
+            artwork.setPrice(0);
         }
         // update
         this.wallet = totalArtworks;

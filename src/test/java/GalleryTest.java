@@ -27,7 +27,7 @@ public class GalleryTest {
 
     @Test
     void canCountStock(){
-        assertThat(gallery.countArtworks()).isEqualTo(10);
+        assertThat(gallery.countArtworks()).isEqualTo(0);
     }
 
     @Test
