@@ -10,7 +10,7 @@ public class GalleryTest {
 
     @BeforeEach
     void setUp(){
-        gallery = new Gallery("Aya and Diana's Farm");
+        gallery = new Gallery("Aya and Diana's Gallery");
         customer = new Customer("Aya", 20000);
     }
 
